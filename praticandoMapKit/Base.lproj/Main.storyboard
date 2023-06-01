@@ -1,24 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jiH-QV-tOV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="8R4-zs-c4B">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="jiH-QV-tOV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPw-d3-Ity">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="72X-PJ-20a" kind="relationship" relationship="rootViewController" id="EcI-eF-87U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1PI-R0-0Ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-384" y="23"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YlG-gL-ehB">
+            <objects>
+                <viewController id="72X-PJ-20a" customClass="ViewController" customModule="praticandoMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VbV-tb-Wol">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praticando Map Kit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3H1-qy-Ira">
+                                <rect key="frame" x="135" y="137.5" width="144.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7t-fN-zdG">
+                                <rect key="frame" x="57" y="423" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.61658567809999998" green="0.0088391967110000007" blue="0.094930476740000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="axg-EO-Enb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="m01-8a-W8S"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Encontre a localização"/>
+                                <connections>
+                                    <segue destination="6Oz-FL-zBB" kind="show" id="AyK-dm-wpg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hvR-Ev-0Al"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3H1-qy-Ira" firstAttribute="centerX" secondItem="VbV-tb-Wol" secondAttribute="centerX" id="6fa-J1-0Cr"/>
+                            <constraint firstItem="Y7t-fN-zdG" firstAttribute="centerX" secondItem="VbV-tb-Wol" secondAttribute="centerX" id="7Un-Dl-Kkp"/>
+                            <constraint firstItem="3H1-qy-Ira" firstAttribute="centerY" secondItem="VbV-tb-Wol" secondAttribute="centerY" constant="-300" id="Ftr-LY-zGR"/>
+                            <constraint firstItem="Y7t-fN-zdG" firstAttribute="centerY" secondItem="VbV-tb-Wol" secondAttribute="centerY" id="xcV-ll-0wx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jhW-le-epg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1P-hY-zDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708.69565217391312" y="22.767857142857142"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Euy-Ve-zca">
+            <objects>
+                <viewController id="6Oz-FL-zBB" customClass="MapViewController" customModule="praticandoMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27c-Ie-pyO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FF8-fM-4km">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HsQ-2o-ndw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HsQ-2o-ndw" firstAttribute="bottom" secondItem="FF8-fM-4km" secondAttribute="bottom" id="e0U-9H-jbV"/>
+                            <constraint firstItem="FF8-fM-4km" firstAttribute="leading" secondItem="HsQ-2o-ndw" secondAttribute="leading" id="qnf-YB-lYr"/>
+                            <constraint firstItem="FF8-fM-4km" firstAttribute="top" secondItem="HsQ-2o-ndw" secondAttribute="top" id="ucg-P0-PtB"/>
+                            <constraint firstItem="HsQ-2o-ndw" firstAttribute="trailing" secondItem="FF8-fM-4km" secondAttribute="trailing" id="ycR-9V-gpZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vkJ-3l-wBV"/>
+                    <connections>
+                        <outlet property="MapView" destination="FF8-fM-4km" id="4gG-Ns-v3n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKp-81-6Bi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="23"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
